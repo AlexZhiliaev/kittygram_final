@@ -140,6 +140,7 @@ jobs:
             echo "DEBUG=False" >> .env
             echo "SECRET_KEY=${{ secrets.SECRET_KEY }}" >> .env
             echo "ALLOWED_HOSTS=${{ secrets.ALLOWED_HOSTS }}" >> .env
+            echo "DOCKER_USERNAME=${{ secrets.DOCKER_USERNAME }}" >> .env
             
       - name: Executing remote ssh commands to deploy
         uses: appleboy/ssh-action@master
